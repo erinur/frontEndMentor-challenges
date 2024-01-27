@@ -79,10 +79,10 @@ body {
 }
 
 .logo {
-  position: absolute;
+  position: relative;
   text-align: center;
   align-self: center;
-  top: 270px;
+  top: -100px;
   letter-spacing:10px;
 }
 
@@ -336,8 +336,7 @@ input:focus {
   }
 
   .logo {
-    top: 230px;
-    margin: 0px;
+    top: -50px;
   }
 
   .input-area {
