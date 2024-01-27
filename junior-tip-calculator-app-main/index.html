@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="preformato.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+  <main class="container">
+    <div class="logo">
+      <img src="./images/logo.svg" alt="">
+    </div>
+    <div class="tip-calculator">
+      <div class="input-area">
+        <div class="input-area-bill">
+          <legend>Bill</legend>
+          <input type="text" placeholder="0">
+        </div>
+        <div class="input-area-tip">
+          <legend>Select Tip %</legend>
+          <div class="input-area-tip-amount">
+            <button class="tip-percent" value="5">5%</button>
+            <button class="tip-percent" value="10">10%</button>
+            <button class="tip-percent" value="15">15%</button>
+            <button class="tip-percent" value="25">25%</button>
+            <button class="tip-percent" value="50">50%</button>
+            <input class="tip-percent" type="text" placeholder="Custom">
+          </div>
+        </div>
+        <div class="input-area-people">
+          <legend>Number of People <span>Can't be zero</span></legend>
+          <input type="text" placeholder="0">
+        </div>
+      </div>
+      <div class="output-area">
+        <div class="output-area-amount">
+          <div class="amount-area">
+            <div class="amount-legend">
+              <h2>Tip Amount</h2>
+              <p>/ person</p>
+            </div>
+            <div class="amount-result tip-amount">
+              $0.00
+            </div>
+          </div>
+          <div class="amount-area">
+            <div class="amount-legend">
+              <h2>Total</h2>
+              <p>/ person</p>
+            </div>
+            <div class="amount-result total-amount">
+              $0.00
+            </div>
+          </div>
+        </div>
+        <button class="reset-button">Reset</button>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>

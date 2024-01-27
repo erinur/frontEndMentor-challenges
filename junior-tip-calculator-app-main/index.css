@@ -1,0 +1,413 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Strong cyan: hsl(172, 67%, 45%)
+
+### Neutral
+
+- Very dark cyan: hsl(183, 100%, 15%)
+- Dark grayish cyan: hsl(186, 14%, 43%)
+- Grayish cyan: hsl(184, 14%, 56%)
+- Light grayish cyan: hsl(185, 41%, 84%)
+- Very light grayish cyan: hsl(189, 41%, 97%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (form inputs): 24px
+
+### Font
+
+- Family: [Space Mono](https://fonts.google.com/specimen/Space+Mono)
+- Weights: 700
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+  font-weight: 700;
+  display: grid;
+  place-content: center;
+  height: 100dvh;
+  background-color: black;
+}
+
+.container {
+  width: 1440px;
+  height: 1024px;
+  background-color: var(--light-grayish-cyan);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-grayish-cyan);
+}
+
+.tip-calculator {
+  width: 920px;
+  height: 480px;
+  background-color: var(--white);
+  border-radius: 16px;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: repeat(2, 414px);
+  gap: 28px;
+}
+
+.logo {
+  position: absolute;
+  text-align: center;
+  align-self: center;
+  top: 270px;
+  letter-spacing:10px;
+}
+
+.input-area {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px;
+}
+
+.input-area-bill {
+  width: 100%;
+  height: 84px;
+}
+
+legend {
+  font-size: 16px;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+input {
+  height: 48px;
+  background-color: var(--very-light-grayish-cyan);
+  border: none;
+  border-radius: 8px;
+  color: var(--very-dark-cyan);
+}
+
+input:hover {
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid lightseagreen;
+}
+
+.input-area-bill input, .input-area-people input {
+  width: 100%;
+  text-align: right;
+  padding-right: 22px;
+}
+
+.input-area-bill input {
+  background-image: url('./images/icon-dollar.svg');
+  background-repeat: no-repeat;
+  background-position-x: 22px;
+  background-position-y: center;
+}
+
+.input-area-bill input::placeholder, .input-area-people input::placeholder {
+  color: var(--light-grayish-cyan)
+}
+
+.input-area-tip {
+  width: 100%;
+  height: 165px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap:12px
+}
+
+.input-area-tip-amount {
+  display: flex;
+  flex-wrap: wrap;
+  gap:14px
+}
+
+.input-area-tip-amount button {
+  width: 118px;
+  height: 48px;
+  color: var(--white);
+  background-color: var(--very-dark-cyan);
+  border: none;
+  border-radius: 6px;
+  display: grid;
+  place-content: center;
+}
+
+.input-area-tip-amount button:hover {
+  cursor: pointer;
+  background-color: var(--light-grayish-cyan);
+  color: var(--very-dark-cyan);
+}
+
+.input-area-tip-amount button:focus {
+  cursor: pointer;
+  background-color: var(--light-grayish-cyan);
+  color: var(--very-dark-cyan);
+}
+
+.input-area-tip-amount input {
+  width: 118px;
+  height: 48px;
+  text-align: center;
+}
+
+.input-area-tip-amount input::placeholder {
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  color: var(--grayish-cyan);
+}
+
+.input-area-tip-amount input::focus {
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  color: var(--grayish-cyan);
+}
+
+.input-area-people {
+  width: 100%;
+  height: 84px;
+}
+
+.input-area-people legend {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-area-people legend span {
+  visibility: hidden;
+  color: red;
+}
+
+.input-area-people input {
+  background-image: url('./images/icon-person.svg');
+  background-repeat: no-repeat;
+  background-position-x: 16px;
+  background-position-y: center;
+}
+
+.error-active {
+  border: 2px solid red!important;
+}
+
+.output-area {
+  grid-column: 2;
+  background-color: var(--very-dark-cyan);
+  border-radius: 16px;
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.output-area-amount {
+  width: 100%;
+
+}
+
+.amount-area {
+  width: 100%;
+  height: 36px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 18px;
+  margin-bottom: 58px;
+}
+
+.amount-legend {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.amount-legend h2 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.amount-legend p {
+  line-height: 14px;
+  font-size: 14px;
+  color: var(--grayish-cyan);
+}
+
+.amount-result {
+  font-size: 48px;
+  color:lightseagreen;
+  margin-bottom: 10px;
+  line-height: 32px;
+}
+
+.reset-button {
+  width: 100%;
+  height: 48px;
+  background-color: lightseagreen;
+  border-radius: 8px;
+  border: none;
+  color: var(--very-dark-cyan);
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.reset-button:hover {
+  cursor: pointer;
+  background-color:var(--light-grayish-cyan);
+}
+
+.attribution {
+  position: absolute;
+  font-size: 11px;
+  text-align: center;
+  align-self: center;
+  top: 1150px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 960px) {
+
+  .container {
+    width: 375px;
+    height: 933px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+
+  .tip-calculator {
+    width: 375px;
+    height: auto;
+    border-radius: 20px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 26px;
+  }
+
+  .logo {
+    top: 230px;
+    margin: 0px;
+  }
+
+  .input-area {
+    padding: 8px;
+    gap: 24px;
+  }
+
+  .input-area-bill {
+    height: 84px;
+  }
+
+  .input-area-tip {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .input-area-tip-amount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:14px
+  }
+  
+  .input-area-tip-amount button {
+    width: 144px;
+  }
+  
+  .input-area-tip-amount input {
+    width: 144px;
+  }
+  
+  .input-area-people {
+    width: 100%;
+    height: 84px;
+  }
+
+  .output-area {
+    padding: 24px;
+  }
+
+  .amount-area {
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 18px;
+    margin-bottom: 36px;
+  }
+
+  .amount-legend h2 {
+    line-height: 16px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .amount-result {
+    font-size: 36px;
+  }
+
+  .reset-button {
+    font-size: 20px;
+  }
+
+  .attribution {
+    top: 1100px;
+  }
+
+}
