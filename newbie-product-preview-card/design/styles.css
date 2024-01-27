@@ -1,0 +1,259 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%)
+
+### Neutral
+
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 14px
+
+### Font
+
+- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- Weights: 500, 700
+
+- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+- Weights: 700
+
+*/
+
+:root {
+  --primary1:hsl(158, 36%, 37%);
+  --primary2:hsl(30, 38%, 92%);
+  --neutral1:hsl(212, 21%, 14%);
+  --neutral2:hsl(228, 12%, 48%);
+  --neutral3:hsl(0, 0%, 100%);
+  --border-radius:12px;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+  font-size: 65%;
+}
+
+body {
+  width: 1440px;
+  height: 600px;
+  background-color: var(--primary2);
+  padding-top: calc(50vh - 240px);
+  display: block;
+  margin: auto;
+}
+
+main {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 640px;
+  height: 480px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+#derecha {
+  width: 50%;
+  height: 480px;
+  align-self: center;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: var(--neutral3);
+  border-radius: 0px var(--border-radius) var(--border-radius) 0px;
+}
+
+#producto {
+  color:var(--neutral2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  height: 60%;
+}
+.categoria-producto {
+  font-family: Montserrat;
+  font-size: 1rem;
+  text-transform:uppercase;
+  letter-spacing: 0.5rem;
+  margin:0px;
+  width: 100%;
+  height: 10%;
+
+}
+.nombre-producto {
+  color:var(--neutral1);
+  font-family: Fraunces;
+  font-weight: bold;
+  font-size: 3rem;
+  width: 65%;
+  margin-top:1.4vw;
+  line-height: 3rem;
+}
+.descripcion-producto {
+  font-family: Montserrat;
+  font-size: 1.3rem;
+  width: 77%;
+  line-height: 2.3rem;
+  margin:0px;
+}
+
+#precio {
+  display: flex;
+  flex-direction: row;
+  align-items: center ;
+  width: 100%;
+  height: 10%;
+}
+#precio .izquierda {
+  width: 48%;
+  height: 100%;
+  color: var(--primary1);
+  font-family: Fraunces;
+  font-weight: bold;
+  font-size: 3rem;
+}
+#precio .derecha {
+  text-decoration:line-through;
+  color:var(--neutral2);
+  font-family: Montserrat;
+  font-size: 1.3rem;
+}
+
+#boton {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 10%;
+}
+.boton {
+  background-color: var(--primary1);
+  color:var(--neutral3);
+  border:none;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 1.2rem;
+  width: 75%;
+  height: 90%;
+  border-radius: 5px;
+}
+.icon-cart {
+  position: relative;
+  width: 5%;
+  height: 30%;
+  left:-57%;
+  top:32%;
+  background-color: var(--primary1);  
+}
+.boton:hover {
+  background-color: hsl(158, 35%, 26%);
+}
+
+
+
+#izquierda {
+  width: 50%;
+  height: 480px;
+  box-sizing: border-box;
+
+}
+
+.foto {
+
+  box-sizing: border-box;
+  border-radius: var(--border-radius) 0px 0px var(--border-radius);
+  height: 480px;
+  width: 100%;
+  background-image: url(./images/image-product-desktop.jpg);
+  background-size:100%;
+}
+
+@media only screen and (max-width: 640px) {
+
+  body {
+    width: 375px;
+    height: 640px;
+    display: block;
+    margin: auto;
+  }
+
+  main {
+    flex-direction: column-reverse;
+    width: 360px;
+    height: 600px;
+  }
+  
+  #derecha {
+    width: 100%;
+    border-radius: 0px 0px var(--border-radius) var(--border-radius);
+    justify-content: space-evenly;
+  }
+  
+  #producto {
+    height: 60%;
+  }
+  .categoria-producto {
+    height: 10%;
+  }
+  .nombre-producto {
+    width: 90%;
+    height: 25%;
+  }
+  .descripcion-producto {
+    height: 75%;
+  }
+  
+  #precio {
+    justify-content:flex-start;
+    margin-top: -5%;
+    margin-bottom: 5%;
+  }
+  #precio .izquierda {
+    width: 40%;
+  }
+  
+  #boton {
+    height: 14%;
+  }
+  .boton {
+    width: 100%;
+    height: 90%;
+  }
+  .icon-cart {
+    left:-65%;
+    top:30%;
+  }
+
+  #izquierda {
+    width: 100%;
+    height: 240px;
+  }
+  .foto {
+    border-radius: var(--border-radius) var(--border-radius) 0px 0px;
+    height: 240px;
+    width: 100%;
+    background-image: url(./images/image-product-mobile.jpg);
+  }
+
+
+}

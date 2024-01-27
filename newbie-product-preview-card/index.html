@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&family=Fraunces&display=swap">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <div id="derecha">
+      <div id="producto"> 
+        <p class="categoria-producto">Perfume</p>
+        <h1 class="nombre-producto">Gabrielle Essence Eau De Parfum</h1>
+        <p class="descripcion-producto">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+      </div>
+      <div id="precio">
+        <p class="precio izquierda">$149.99</p>
+        <p class="precio derecha">$169.99</p>
+      </div>
+      <div id="boton">
+        <button class="boton" type="submit" name="Add to Cart" value="Add to Cart" formaction="#">Add to Cart</button>
+        <img class="icon-cart" src="./images/icon-cart.svg" alt="icono de carrito de la compra">
+      </div>
+    </div>
+    <div id="izquierda">
+      <div class="foto-escritorio">
+        <img src="./images/image-product-desktop.jpg" alt="Frasco de perfume Gabrielle Chanel">
+      </div>
+      <div class="foto-movil">
+        <img src="./images/image-product-mobile.jpg" alt="Frasco de perfume Gabrielle Chanel">
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
+</body>
+</html>

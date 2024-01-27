@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Ping coming soon page</title>
+  <script src="https://kit.fontawesome.com/7e55d565b9.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./src/index.css">
+  <script src="./src/index.js"></script>
+</head>
+<body>
+  <main>
+    <div id="container">
+    <div id="up">
+      <img id="logo" src="./images/logo.svg" alt="">
+      <h2><span>We are launching</span> soon!</h2>
+      <p>Subscribe and get notified</p>
+      <form id="formulario" name="formulario">
+        <input class="email" name="email" type="text" placeholder="Your email address..." >
+        <input class="submit" type="button" value="Notify Me" onclick="check()">
+      </form>
+      <span id="error"></span>
+    </div>
+    <div id="center">
+      <img id="dashboard" src="./images/illustration-dashboard.png" alt="">
+    </div>
+    <div id="down">
+      <div id="RRSS">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+      <p id="copyright">&copy; Copyright Ping. All rights reserved.</p>
+      <div>
+        <p class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="#">Your Name Here</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+  </main>
+</body>
+</html>
