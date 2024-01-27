@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./index.css">
+  <script src="https://kit.fontawesome.com/7e55d565b9.js" crossorigin="anonymous"></script>
+  <title>Frontend Mentor | Intro component with sign up form</title>
+</head>
+<body>
+  <main>
+    <div id="container">
+      <div id="container-left">
+        <h1>Learn to code by watching others</h1>
+        <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+          but understanding how developers think is invaluable.</p>
+      </div>
+      <div id="container-right">
+        <p class="try"><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+        <form id="frm1">
+            <input type="text" placeholder="First Name" id="firstName">
+            <p id="firstNameError" class="error">First Name cannot be empty</p>
+            <i id="firstNameErrorimg" class="fa-solid fa-circle-exclamation"></i>
+          <input type="text" placeholder="Last Name" id="lastName">
+            <p id="lastNameError" class="error">Last Name cannot be empty</p>
+            <i id="lastNameErrorimg" class="fa-solid fa-circle-exclamation"></i>
+          <input type="text" placeholder="Email Address"  id="emailAddress">
+            <p id="emailAddressError" class="error">Looks like this is not an email</p>
+            <i id="emailAddressErrorimg" class="fa-solid fa-circle-exclamation"></i>
+          <input type="text" placeholder="Password" id="password">
+            <p id="passwordError" class="error">Password cannot be empty</p>
+            <i id="passwordErrorimg" class="fa-solid fa-circle-exclamation"></i>
+          <button type="button" onclick="recorrerInputs()">Claim your free trial</button>
+          <p id="form-bottom" class="terms">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
+  <script src="./index.js"></script>
+</body>
+</html>

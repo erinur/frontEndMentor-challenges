@@ -1,0 +1,359 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Violet: hsl(257, 40%, 49%)
+- Soft Magenta: hsl(300, 69%, 71%)
+
+## Typography
+
+### Headings
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400, 600
+
+### Body
+
+- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- Weights: 400
+
+## Icons
+
+For the social icons, you can use a font icon library. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com/)
+- [IcoMoon](https://icomoon.io/)
+- [Ionicons](https://ionicons.com/)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* HERE STARTS SPECIFIC CSS */
+
+:root {
+  /* Primary colors */
+
+	--violet: hsl(257, 40%, 49%);
+	--soft-magenta: hsl(300, 69%, 71%);
+
+  /* Neutral colors */
+
+
+}
+
+* {
+  margin:0px;
+  padding: 0px;
+  text-decoration:none;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  font-family: 'Open Sans', 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  margin: auto;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  }
+
+.main-container {
+  max-width: 1440px;
+  min-width: 1440px;
+  margin: auto;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+
+.bg-box {
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
+  background-color: var(--violet);
+}
+.bg-desktop {
+  display: block;
+}
+.bg-mobile {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.header-box {
+  width: 200px;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+
+.container-box {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 56% 35%;
+  gap: 4%;
+}
+.left {
+  grid-column: 1;
+}
+.left img {
+  width: 100%;
+}
+
+.right {
+  grid-column: 2;
+  text-align: left;
+}
+.right h1 {
+  margin-top: 2.4rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+.right p {
+  margin-top: 1.2rem;
+
+}
+.right button {
+  margin-top: 4rem;
+  border: none;
+  border-radius: 5rem;
+  padding: 0.75rem 3.5rem;
+  color: var(--violet);
+}
+.right button:hover {
+  background-color: var(--soft-magenta);
+  color: white;
+  cursor:pointer
+}
+
+.footer-box {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.attribution-box {
+  color:white;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 1.2rem;
+}
+  .attribution {
+    font-size: 0.75rem;
+    text-align: center;
+    letter-spacing: 0.1rem;
+  }
+  .attribution a {
+    color:burlywood;
+    text-decoration: underline;
+  }
+
+.rrss-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.rrss-box i {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+.rrss-box i:hover {
+  border: 1px solid var(--soft-magenta);
+  color: var(--soft-magenta);
+  cursor:pointer
+}
+
+@media only screen and (max-width: 1080px) {
+
+  .main-container {
+    width: 375px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 100%;
+  }
+
+  .bg-box {
+    width: 375px;
+    height: 100%;
+    margin: auto;
+  }
+
+  .bg-desktop {
+    display: none;
+  }
+  .bg-mobile {
+    display: block;
+  }
+  
+  .container {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
+    margin: auto;
+  }
+  
+  .header-box {
+    width: 140px;
+    margin-top: 2rem;
+    margin-bottom: 3.6rem;
+  }
+  
+  .container-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .right {
+    text-align: center;
+  }
+  .right h1 {
+    margin-top: 3.6rem;
+    font-size: 1.8rem;
+  }
+
+  .right button {
+    margin-top: 2rem;
+    padding: 0.5rem 4rem;
+  }
+
+
+  .footer-box {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .attribution-box {
+    color:white;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 1.2rem;
+  }
+    .attribution {
+      font-size: 0.6rem;
+    }
+  
+  .rrss-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .rrss-box i {
+    width: 2rem;
+    margin: 0.2rem;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+  }
+
+
+}
