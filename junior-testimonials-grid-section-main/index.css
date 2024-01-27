@@ -1,0 +1,347 @@
+
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Moderate violet: hsl(263, 55%, 52%)
+Very dark grayish blue: hsl(217, 19%, 35%)
+Very dark blackish blue: hsl(219, 29%, 14%)
+White: hsl(0, 0%, 100%)
+
+### Neutral
+
+Light gray: hsl(0, 0%, 81%)
+Light grayish blue: hsl(210, 46%, 95%)
+
+Note for text colors:
+
+1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+
+## Typography
+
+### Body Copy
+
+- Font size: 13px
+
+### Font
+
+- Family: [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed)
+- Weights: 500, 600
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* HERE STARTS SPECIFIC CSS */
+
+:root {
+/*
+### Primary
+
+Moderate violet: hsl(263, 55%, 52%)
+Very dark grayish blue: hsl(217, 19%, 35%)
+Very dark blackish blue: hsl(219, 29%, 14%)
+White: hsl(0, 0%, 100%)
+
+### Neutral
+
+Light gray: hsl(0, 0%, 81%)
+Light grayish blue: hsl(210, 46%, 95%)
+
+*/
+/*codificacion de colores*/
+
+  /*gradiente del fondo de pantalla*/
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue:hsl(217,  19%,35%);
+  --very-dark-blackish-blue:hsl(219,  29%,14%);
+  --white: hsl(0, 0%, 100%);
+
+  /*neutral*/
+  --light-grayish-blue:hsl(210,46%,95%);
+  --light-gray: hsl(0, 0%, 81%);
+}
+
+body {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--very-dark-blackish-blue);
+}
+
+main {
+  width: 1440px;
+  height: 900px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-grayish-blue);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 13px;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(4, 256px);
+  grid-template-rows: 280px 265px;
+  gap: 25px 28px;
+}
+
+#section-1 {
+  background-color: var(--moderate-violet);
+  grid-column: 1/3;
+  grid-row: 1;
+}
+
+#section-2 {
+  background-color: var(--very-dark-grayish-blue);;
+  grid-column: 3;
+  grid-row: 1;
+}
+
+#section-3{
+  background-color: var(--white);
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#section-4 {
+  background-color: var(--very-dark-blackish-blue);
+  grid-column: 2/4;
+  grid-row: 2;
+}
+
+#section-5{
+  background-color: var(--white);
+  grid-column: 4;
+  grid-row: 1/3;
+}
+
+.tarjeta {
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+  padding-left: 24px;
+  padding-right: 40px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.tarjeta h2 {
+  font-size: 20px;
+  line-height: normal;
+  margin-bottom: 18px;
+}
+
+.tarjeta p {
+  font-weight: 500;
+  font-size: 13px;
+  opacity: 0.7;
+  line-height: 133%;
+}
+
+.claro {
+  color: var(--very-dark-grayish-blue);
+  box-shadow: 40px 40px 20px -35px var(--light-gray);
+}
+
+.oscuro {
+  color: var(--white);
+}
+
+.oscuro h3, .oscuro h2{
+  font-weight: 500;
+}
+
+.top-card {
+  display: grid;
+  width: 60;
+  grid-template-columns: 30px 200px;
+  grid-template-rows: 12px;
+  gap: 0px 10px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.top-card .imagen {
+  grid-column: 1;
+  grid-row: 1/3;
+  border-radius: 50%;
+}
+
+#section-1 .imagen {
+  border: 2px solid hsl(263, 55%, 72%);
+}
+
+#section-4 .imagen {
+  border: 2px solid var(--moderate-violet);
+}
+
+
+.topcard h3 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.top-card h4 {
+  grid-column: 2;
+  grid-row: 2;
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.quote {
+  position: absolute;
+  top: 0px;
+  right: 90px;
+  z-index: -1;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (max-width: 960px) {
+
+  main {
+    width: 375px;
+    height: 1966px;
+    font-size: 13px;
+  }
+
+  #container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5, auto);
+    gap: 25px;
+  }
+
+  #section-1 {
+    background-color: var(--moderate-violet);
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  #section-2 {
+    background-color: var(--very-dark-grayish-blue);
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  #section-3{
+    background-color: var(--white);
+    grid-column: 1;
+    grid-row: 3;
+  }
+  
+  #section-4 {
+    background-color: var(--very-dark-blackish-blue);
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  #section-5{
+    background-color: var(--white);
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  .tarjeta {
+    margin: 0px 26px;
+  }
+
+  .quote {
+    right: 26px;
+  }
+
+}

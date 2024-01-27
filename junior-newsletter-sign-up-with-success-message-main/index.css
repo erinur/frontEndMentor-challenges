@@ -1,0 +1,380 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Tomato: hsl(4, 100%, 67%)
+
+### Neutral
+
+- Dark Slate Grey: hsl(234, 29%, 20%)
+- Charcoal Grey: hsl(235, 18%, 26%)
+- Grey: hsl(231, 7%, 60%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 16px
+
+### Font
+
+- Family: [Roboto](https://fonts.google.com/specimen/Roboto)
+- Weights: 400, 700
+*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* HERE STARTS SPECIFIC CSS */
+
+:root {
+  /*codificacion de colores*/
+  
+    /*Texto primario*/
+    --tomato: hsl(4, 100%, 67%);
+    --tomato-ligth: hsla(4, 100%, 67%, 0.15);
+  
+    /*Neutral*/
+    --dark-slate-grey:hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235,18%,26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    src: url("./assets/fonts/Roboto-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    src: url("./assets/fonts/Roboto-Bold.ttf");
+    font-weight: bold;
+  }
+    
+  body {
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--charcoal-grey);
+  }
+  
+  main {
+    color: var(--dark-slate-grey);
+    width: 1440px;
+    height: 1080px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  #container {
+    width: 58rem;
+    height: 40rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    border-radius: 2rem;
+    background-color: var(--white);
+    padding: 1.5rem;
+  }
+
+  #container-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    padding-left: 2.25rem;
+    padding-right: 0rem;
+  }
+
+  #content-text-header {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+
+  }
+
+  #content-text-resume {
+    margin-bottom: 1.5rem;
+  }
+
+  #content-text-list {
+    padding: 0rem;
+    text-align: left;
+    list-style: none;
+  }
+
+  #content-text-list li {
+    background-image: url(./assets/images/icon-list.svg);
+    background-repeat: no-repeat;
+    padding-left: 2.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+  #container-content-form {
+    width: 100%;
+    padding-top: 1rem;
+    padding-right: 1.6rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #content-form-label {
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #content-form-error {
+    font-size: 0.75rem;
+    color: var(--tomato);
+    visibility:hidden;
+  }
+
+  #content-form-email {
+    height: 3.5rem;
+    border-radius: 8px;
+    padding-left: 2rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid var(--grey);
+  }
+
+  #content-form-email:hover {
+    cursor: pointer;
+  }
+
+  #content-form-email::placeholder {
+    color: var(--grey);
+  }
+
+  #content-form-submit {
+    height: 3.5rem;
+    border-radius: 8px;
+    background-color: var(--dark-slate-grey); 
+    color: var(--white);
+    border: none;
+  }
+
+  #content-form-submit:hover {
+    cursor: pointer;
+    background-image: linear-gradient(90deg, #ff5577 30%, var(--tomato) 50%);
+
+  }
+
+  #container-image {
+    display: flex;
+  }
+
+  #container-image-desktop {
+    display: unset;
+  }
+
+  #container-image-mobile {
+    display: none;
+  }
+
+  #response {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 31rem;
+    height: 32rem;
+    padding: 2rem;
+  }
+
+  #response h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 3.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  #response p span{
+    font-weight: bold;
+  }
+
+  #response input {
+    margin-top: 2.5rem;
+    width: 100%;
+    height: 3.3rem;
+    background-color: var(--dark-slate-grey);
+    color: var(--white);
+    border-radius: 8px;
+  }
+
+  #response input:hover {
+    cursor: pointer;
+  }
+
+  has-#response ,#container:has(#response) {
+    width: 31rem;
+    height: 32rem;
+  }
+
+@media only screen and (max-width: 940px) {
+
+  main {
+    width: 375px;
+    height: 840px;
+  }
+
+  #container {
+    width: 375px;
+    height: 840px;
+    justify-content:space-between;
+    flex-direction: column-reverse;
+    border-radius: 0rem;
+    padding: 0rem;
+  }
+
+  #container-image-desktop {
+    display: none;
+  }
+
+  #container-image-mobile {
+    display: unset;
+  }
+
+  #container-content {
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  #content-text-header {
+    font-size: 2.5rem;
+  }
+
+  #container-content-form {
+    padding-right: 0rem;
+  }
+
+  #response {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content:end;
+    padding: 1.6rem;
+  }
+
+  #response h1 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  #response p span{
+    font-weight: bold;
+  }
+
+  #response input {
+    margin-top: 20rem;
+    height: 3.3rem;
+  }
+
+  #container:has(#response) {
+    width: 375px;
+    height: 840px;
+  }
+
+}
