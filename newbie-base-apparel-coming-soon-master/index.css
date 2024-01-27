@@ -1,0 +1,387 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Desaturated Red: hsl(0, 36%, 70%)
+- Soft Red: hsl(0, 93%, 68%)
+
+### Neutral
+
+- Dark Grayish Red: hsl(0, 6%, 24%)
+
+### Gradients
+
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
+- Weights: 300, 400, 600
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* HERE STARTS SPECIFIC CSS */
+
+:root {
+
+/*codificacion de colores*/
+
+/*### Primary*/
+
+--desaturated-red: hsl(0, 36%, 70%);
+--soft-red: hsl(0, 93%, 68%);
+
+/*### Neutral*/
+
+--dark-grayish-red: hsl(0, 6%, 24%);
+
+/*
+### Gradients
+
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+
+*/
+
+}
+
+body {
+
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+
+}
+
+main {
+  width: 1440px;
+  height: 800px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  color: var(--desaturated-red)
+}
+
+#container {
+  width: 1440px;
+  height: 800px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 830px 610px;
+  grid-template-rows: 120px 680px;
+  background-color: white;
+}
+
+#pattern {
+  grid-column: 1;
+  grid-row: 1/3;
+}
+
+#logo {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 160px;
+  padding-right: 220px;
+  padding-top: 60px;
+}
+
+#content {
+  grid-column: 1;
+  grid-row: 2/3;
+  padding-left: 160px;
+  padding-right: 220px;
+  padding-top: 120px;
+}
+
+#image {
+  grid-column: 2;
+  grid-row: 1/3;
+}
+
+.image-desktop {
+  display:unset;
+}
+
+.image-mobile {
+  display: none;
+}
+
+#title {
+  text-transform: uppercase;
+  font-size: 64px;
+  line-height: 64px;
+  font-weight: 300;
+  letter-spacing:16px;
+}
+
+#title span {
+  color: black;
+  font-weight: 600;
+}
+
+#text {
+  line-height: 32px;
+  margin-top: 24px;
+}
+
+#formulario {
+  position: relative;
+  margin-top:32px;
+}
+
+.email {
+  width: 440px;
+  height: 56px;
+  border-radius: 32px;
+  border: 1px solid var(--desaturated-red);
+  padding: 0px 28px;
+  margin-bottom: 12px;
+  opacity: 50%;
+}
+.email::placeholder {
+  color: var(--desaturated-red);
+}
+
+.submit {
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 56px;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: none;
+  border-radius: 28px;
+  box-shadow: 10px 10px 40px 0px var(--desaturated-red);
+}
+
+.submit img {
+  margin: auto;
+}
+
+.email:focus {
+  outline: 0;
+  border: 2px solid var(--soft-red);
+  opacity: 100%;
+}
+
+.submit:hover {
+  box-shadow: 10px 10px 40px 0px var(--desaturated-red);
+  filter: brightness(125%);
+}
+
+.submit:focus {
+  box-shadow: 10px 10px 40px 0px var(--desaturated-red);
+  filter: brightness(125%);
+}
+
+#error {
+  margin-left: 28px;
+  color: var(--soft-red);
+  align-self: flex-start;
+}
+#error-img {
+  position: absolute;
+  top:16px;
+  right: 116px;
+  display: none;
+}
+
+@media only screen and (max-width: 960px) {
+  
+  main {
+    width: 375px;
+  }
+
+  #container {
+    width: 375px;
+    height: 800px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 375px;
+    grid-template-rows: 84px 250px 464px;
+    background-color: white;
+  }
+  
+  #pattern {
+    display: none;
+  }
+  
+  #logo {
+    grid-column: 1;
+    grid-row: 1;
+    padding-left: 30px;
+    padding-right: 0px;
+    padding-top: 0px;
+  }
+
+  #logo img {
+    width: 100px;
+  }
+  
+  #content {
+    grid-column: 1;
+    grid-row: 3;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    align-items: center;
+
+  }
+  
+  #image {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  .image-desktop {
+    display:none;
+  }
+  
+  .image-mobile {
+    display: unset;
+  }
+
+  #title {
+    font-size: 40px;
+    line-height: 42px;
+    letter-spacing:12px;
+    text-align: center;
+  }
+  
+  #title span {
+    text-align: center;
+  }
+  
+  #text {
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 16px;
+    text-align: center;
+  }
+  
+  #formulario {
+    margin-top:24px;
+  }
+  
+  .email {
+    width: 305px;
+    height: 48px;
+    border-radius: 24px;
+  }
+  .email::placeholder {
+    color: var(--desaturated-red);
+  }
+  
+  .submit {
+    right: 0px;
+    width: 64px;
+    height: 48px;
+    border-radius: 24px;
+  }
+
+}

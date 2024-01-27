@@ -1,0 +1,440 @@
+
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+- Very Dark Grayish Blue: hsl(217, 19%, 35%)
+- Desaturated Dark Blue: hsl(214, 17%, 51%)
+- Grayish Blue: hsl(212, 23%, 69%)
+- Light Grayish Blue: hsl(210, 46%, 95%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 13px
+
+### Headings
+
+- Family: [Manrope](https://fonts.google.com/specimen/Manrope)
+- Weights: 500, 700
+
+## Icons
+
+We provide SVGs for the social icons. But please feel free to use a font icon library if you like. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com)
+- [IcoMoon](https://icomoon.io)
+- [Ionicons](https://ionicons.com)
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* HERE STARTS SPECIFIC CSS */
+
+:root {
+/*
+### Primary
+
+Moderate violet: hsl(263, 55%, 52%)
+Very dark grayish blue: hsl(217, 19%, 35%)
+Very dark blackish blue: hsl(219, 29%, 14%)
+White: hsl(0, 0%, 100%)
+
+### Neutral
+
+Light gray: hsl(0, 0%, 81%)
+Light grayish blue: hsl(210, 46%, 95%)
+
+*/
+/*codificacion de colores*/
+
+  --very-dark-grayish-blue:hsl(217,  19%,35%);
+  --light-grayish-blue:hsl(210,46%,95%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayinsh-blue: hsl(212, 23%, 69%);
+
+}
+
+body {
+
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+
+}
+
+main {
+  width: 1440px;
+  height: 900px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-grayish-blue);
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 730px;
+  height: 280px;
+  background-color: white;
+  border-radius: 12px;
+
+}
+
+#container-left {
+  width: 290px;
+  height: 280px;
+  border-radius: 12px 0px 0px 12px;
+  overflow: hidden;
+}
+
+#container-left img{
+  height: 280px;
+  object-position: left;
+  object-fit: cover;
+}
+
+#container-right {
+  padding: 36px;
+  width: 440px;
+  height: 280px;
+}
+
+#article-title {
+  font-size: 20px;
+  line-height:28px;
+  color: var(--very-dark-grayish-blue);
+}
+
+#article-text {
+  margin: 12px 0px;
+  font-size: 13px;
+  color: var(--desaturated-dark-blue);
+}
+
+#container-right-down {
+  display: grid;
+  width: 380px;
+  grid-template-columns: 40px 260px 40px;
+  grid-template-rows: 20px 20px;
+  align-items: center;
+  padding: 0px 0px;
+  gap: 0px 16px
+}
+
+#avatar-photo {
+  width: 40px;
+  border-radius: 50%;
+  grid-column: 1;
+  grid-row: 1/3;;
+}
+
+#avatar-name {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 13px;
+  color: var(--very-dark-grayish-blue);
+  margin: 0px;
+}
+
+#avatar-date {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0px 0px;
+  font-size: 12px;
+  color: var(--grayinsh-blue);
+  font-weight: 400;
+}
+
+#share {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  grid-column: 3;
+  grid-row: 1/3;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+
+#share-off {
+  position: relative;
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+#share-icon-off{
+  position: absolute;
+  border-radius: 50%;
+  padding: 6px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-grayish-blue);
+  top: 3px;
+  z-index: 1;
+}
+
+#share-on {
+  position: relative;
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  align-items:end;
+  justify-content: center;
+}
+
+#share-icon-on{
+  position: absolute;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--desaturated-dark-blue);
+  top:3px;
+  z-index: -1;
+}
+
+#share-icon-on svg {
+  fill: white;
+}
+
+#share-icon-off svg, #share-icon-on svg {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+}
+
+#share-box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  top:-77px;
+  z-index: -1;
+}
+
+#contenido-share-box {
+  background-color: var(--very-dark-grayish-blue);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 245px;
+  height: 55px;
+  padding: 20px;
+  border-radius: 10px;
+  color: var(--grayinsh-blue);
+  text-transform:uppercase;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 6px;
+}
+
+#pico-share-box {
+  width: 16px;
+  height: 16px;
+  background-color: var(--very-dark-grayish-blue);
+  transform: rotate(45deg);
+  position: relative;
+  top: -8px;
+}
+
+.RRSS {
+  width: 20px;
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (max-width: 960px) {
+
+  main {
+    width: 375px;
+    height: 667px;
+  }
+
+  #container {
+    flex-direction: column;
+    width: 330px;
+    height: 510px;
+    overflow: hidden;
+    }
+
+    #container-left {
+      width: 330px;
+      height: 200px;
+      border-radius: 0px;
+    }
+    
+    #container-left img{
+      width: 330px;
+      height: 230px;
+      object-position:0% 50%;
+      object-fit: cover;
+    }
+    
+    #container-right {
+      width: 330px;
+      height: 310px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 16px 36px;
+    }
+
+    #article-title {
+      font-size: 16px;
+      line-height:28px;
+      color: var(--very-dark-grayish-blue);
+    }
+    
+    #article-text {
+      margin: 8px 0px;
+      font-size: 13px;
+      color: var(--desaturated-dark-blue);
+    }
+
+    #container-right-down {
+      display: grid;
+      width: 330px;
+      grid-template-columns: 40px 160px 40px;
+      grid-template-rows: 14px 14px;
+      align-items: center;
+      padding: 0px 0px;
+      gap: 6px 12px
+    }
+
+    #share-icon-off{
+      top:0px;
+      right: 0px;
+    }
+    
+    #share-icon-on{
+      top:0px;
+      right: 0px;
+
+    }
+    
+    #share-box {
+      top:-16px;
+      right: -35px;
+
+    }
+    
+    #contenido-share-box {
+      padding-right: 90px;
+      width: 330px;
+      height: 65px;
+      border-radius: 0px;
+    }
+    
+    #pico-share-box {
+      display: none;
+    }
+
+
+}

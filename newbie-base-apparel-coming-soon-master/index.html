@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./index.css">
+  <script src="./index.js"></script>
+  <title>Frontend Mentor | Coming-soon</title>
+</head>
+<body>
+  <main>
+    <div id="container">
+      <div id="pattern">
+        <img alt="" src="./images/bg-pattern-desktop.svg" alt="">
+      </div>
+      <div id="logo">
+        <img alt="" src="./images/logo.svg" alt="">
+      </div>
+      <div id="content">
+        <h1 id="title">We're <span>coming soon</span></h1>
+        <p id="text">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+        <form id="formulario" name="formulario">
+        <input class="email" name="email" type="text" placeholder="Email Address" ><img id="error-img" src="./images/icon-error.svg" alt="">
+        <button class="submit" type="button" onclick="check()"><img src="./images/icon-arrow.svg" alt="submit email"></button>
+        </form>
+        <span id="error"></span>
+      </div>
+      <div id="image">
+        <img class="image-desktop" alt="" src="./images/hero-desktop.jpg">
+        <img class="image-mobile" alt="" src="./images/hero-mobile.jpg">
+      </div>
+    </div>
+  </main>  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
+</body>
+</html>

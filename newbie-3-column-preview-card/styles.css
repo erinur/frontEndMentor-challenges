@@ -1,0 +1,179 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%)
+
+### Neutral
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+
+- Family: [Big Shoulders Display](https://fonts.google.com/specimen/Big+Shoulders+Display)
+- Weights: 700
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  /* primary colors */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  /* paragraphs */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* background, headings, buttons */
+  --light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: 0;
+  box-sizing: border-box;
+}
+
+html {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 1440px;
+  height: 800px;
+  overflow-x: hidden;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background-color: white;
+}
+
+.content {
+  width: 840px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.content * {
+  color: var(--transparent-white);
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 0.9375rem;
+}
+
+.box {
+ padding: 2.15rem;
+}
+.box * {
+  margin-bottom: 2rem;
+}
+.box h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: 'Big Shoulders Display';
+}
+.box p {
+  line-height: 1.875rem;
+  margin-bottom: 4rem;
+}
+.box button {
+  width: 8.25rem;
+  height:fit-content;
+  padding:0.625rem;
+  border-radius: 2rem;
+  border: none;
+  margin-bottom: 1rem;
+  border: 0.125rem solid var(--transparent-white);
+
+}
+
+.sedans {
+  grid-column: 1;
+  background-color: var(--bright-orange);
+}
+.sedans button {
+  color:var(--bright-orange);
+}
+.suvs {
+  grid-column: 2;
+  background-color: var(--dark-cyan);
+}
+.suvs button {
+  color:var(--dark-cyan);
+}
+.luxury {
+  grid-column: 3;
+  background-color: var(--very-dark-cyan);
+}
+.luxury button {
+  color:var(--very-dark-cyan);
+}
+.box button:hover {
+  margin-bottom: 1rem;
+  background-color: transparent;
+  color: var(--transparent-white);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 840px) {
+
+  body {
+    height: 1500px;
+  }
+  
+  .content {
+    width: 320px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 100%;
+  }
+  .box {
+    padding: 2.5rem;
+   }
+  .box p {
+    line-height: 1.875rem;
+    margin-bottom: 2rem;
+  }
+
+  .sedans {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: var(--bright-orange);
+  }
+  .suvs {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: var(--dark-cyan);
+  }
+  .luxury {
+    grid-column: 1;
+    grid-row: 3;
+    background-color: var(--very-dark-cyan);
+  }
+
+}

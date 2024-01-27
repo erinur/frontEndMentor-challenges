@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+  <link rel="stylesheet" href="./src/styles.css">
+  <script defer src="./src/app.js"></script>
+</head>
+<body>
+  <main>
+    <div id='contenido'>
+      <div id="izquierda">
+        <div id="illustration-back">
+          <div id="ib-desktop">
+            <img id="patternDesktop" src="./images/bg-pattern-desktop.svg" alt=""/>
+            <img id="illustrationWomanDesktop" src="./images/illustration-woman-online-desktop.svg" alt=""/>
+          </div>
+          <div id="ib-mobile">
+            <img id="patternMobile" src="./images/bg-pattern-mobile.svg" alt=""/>
+          </div>
+        </div>
+        <div id="illustration-front">
+          <div id="if-desktop">
+            <img id="illustrationBoxDesktop" src="./images/illustration-box-desktop.svg" alt=""/>
+          </div>
+          <div id="if-mobile">
+            <img id="illustrationWomanMobile" src="./images/illustration-woman-online-mobile.svg" alt=""/>
+          </div>
+        </div>
+      </div>
+      <div id="derecha">
+        <div id="desplegable">
+          <h1 id="tituloDesplegable">FAQ</h1>
+            <div class="faq-box" key=1 id="titulo1">
+              <div class="question">
+                <p>How many team members can I invite?</p>
+                <img class="icon-arrow-down" src="./images/icon-arrow-down.svg" alt="" />
+              </div>
+              <p class="answer">You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
+            </div>
+            <div class="faq-box active" key=2 id="titulo2">
+              <div class="question">
+                <p>What is the maximum file upload size?</p>
+                <img class="icon-arrow-down" src="./images/icon-arrow-down.svg" alt="" />
+              </div>
+              <p class="answer">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+            </div>
+            <div class="faq-box" key=3 id="titulo3">
+              <div class="question">
+                <p>How do I reset my password?</p>
+                <img class="icon-arrow-down" src="./images/icon-arrow-down.svg" alt="" />
+              </div>
+              <p class="answer">Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.</p>
+            </div>
+            <div class="faq-box" key=4 id="titulo4">
+              <div class="question">
+                <p>Can I cancel my subscription?</p>
+                <img class="icon-arrow-down" src="./images/icon-arrow-down.svg" alt="" />
+              </div>
+              <p class="answer">Yes! Send us a message and we’ll process your request no questions asked.</p>
+            </div>
+            <div class="faq-box" key=5 id="titulo5">
+              <div class="question">
+                <p>Do you provide additional support?</p>
+                <img class="icon-arrow-down" src="./images/icon-arrow-down.svg" alt="" />
+              </div>
+              <p class="answer">Chat and email support is available 24/7. Phone lines are open during normal business hours</p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/erinur">Erin Ur</a>.
+    </div>
+  </main>
+</body>
+</html>
