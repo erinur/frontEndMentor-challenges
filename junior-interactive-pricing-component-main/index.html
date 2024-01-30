@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./preformato.css">
+  <script src="./lib/jquery-3.7.0.js"></script>
+  <script src="./lib/jquery-ui.min.js"></script>
+  <title>Frontend Mentor | Interactive pricing component</title>
+</head>
+<body>
+  <main class="container">
+    <div class="interactive-pricing-component">
+      <div class="pricing-component-header">
+        <h1>Simple, traffic-based pricing</h1>
+        <p>Sign-up for our 30-day trial. No credit card required.</p>
+        <img src="./images/pattern-circles.svg" alt="">
+      </div>
+      <div class="pricing-component-main">
+        <div class="pricing-component-main-header">
+          <div class="pageviews"></div>
+          <div class="price-box">
+            <p class="price" ></p>
+            <p>/ month</p>
+          </div>
+          <input class="slider" name="slider" type="range" min="0" max="4" value="2" step="1"/>
+        </div>
+        <div class="pricing-component-main-period">
+          <p class="monthly">Monthly Billing</p>
+          <div class="flipswitch">
+            <input type="checkbox" name="flipswitch" class="flipswitch-cb" id="fs">
+            <label class="flipswitch-label" for="fs">
+              <div class="flipswitch-inner"></div>
+              <div class="flipswitch-switch"></div>
+            </label>
+          </div>
+          <p class="yearly">Yearly Billing <span></span></p>
+        </div>
+        <div class="pricing-component-main-footer">
+          <ul class="offer-list">
+            <li><p>Unlimited websites</p></li>
+            <li><p>100% data ownership</p></li>
+            <li><p>Email reports</p></li>
+          </ul>
+          <button class="offer-button">Start my trial</button>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </main>
+  <script src="./index.js"></script>
+</body>
+</html>
