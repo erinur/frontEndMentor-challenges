@@ -84,6 +84,7 @@ body {
   background-color: var(--very-pale-blue);
   background-image: url('./images/bg-pattern.svg');
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .interactive-pricing-component {
@@ -118,6 +119,7 @@ body {
 .pricing-component-header img {
   position: absolute;
   justify-self: center;
+  align-self: center;
 }
 
 .pricing-component-main {
@@ -387,11 +389,9 @@ body {
 }
 
 .attribution {
-  position: absolute;
+  position: relative;
   font-size: 11px;
-  text-align: center;
   align-self: center;
-  top:1020px;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -423,10 +423,7 @@ body {
     font-size: 13px;
     width: 170px;
   }
-  
-  .pricing-component-header img {
-    top:40px;
-  }
+
 
   .pricing-component-main {
     width: 325px;
@@ -493,10 +490,6 @@ body {
     padding-left: 0px;
     padding-top: 12px;
     padding-bottom: 12px;
-  }
-
-  .attribution {
-    top:720px;
   }
 
 }
