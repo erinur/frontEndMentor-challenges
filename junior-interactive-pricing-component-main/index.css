@@ -403,6 +403,8 @@ body {
     width: 375px;
     height: 800px;
     padding: 0px 25px;
+    display: flex;
+    justify-content: center;
   }
 
   .interactive-pricing-component {
@@ -423,7 +425,7 @@ body {
   }
   
   .pricing-component-header img {
-    top:102px;
+    top:40px;
   }
 
   .pricing-component-main {
@@ -431,7 +433,6 @@ body {
     height: 480px;
     padding: 0px 22px;
     justify-content: flex-start;
-
   }
   .pricing-component-main-header {
     display: grid;
@@ -495,7 +496,7 @@ body {
   }
 
   .attribution {
-    top:820px;
+    top:720px;
   }
 
 }
