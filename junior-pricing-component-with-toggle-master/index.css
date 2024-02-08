@@ -1,0 +1,208 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Linear Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%)
+
+### Neutral
+
+- Very Light Grayish Blue: hsl(240, 78%, 98%)
+- Light Grayish Blue: hsl(234, 14%, 74%)
+- Grayish Blue: hsl(233, 13%, 49%)
+- Dark Grayish Blue: hsl(232, 13%, 33%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- Weight: 700
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+
+:root {
+  /* Primary */
+
+  /* --linear-gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%); */
+  --linear-gradient: linear-gradient(180deg, hsl(236, 72%, 79%) 0%, hsl(237, 63%, 64%) 100%);
+  --light-violet: hsl(236, 72%, 79%);
+  --medium-violet: hsl(237, 63%, 64%);
+
+  /* Neutral */
+
+  --very-light-grayish-blue: hsl(240, 78%, 98%);
+  --light-grayish-blue: hsl(234, 14%, 74%);
+  --grayish-blue: hsl(233, 13%, 49%);
+  --dark-grayish-blue: hsl(232, 13%, 33%);
+}
+
+
+body {
+  display: grid;
+  place-content: center;
+  height: 100dvh;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 1440px;
+  height: 850px;
+  padding: 90px;
+  background-color: var(--very-light-grayish-blue);
+}
+
+.container-background{
+  position: absolute;
+  align-self: center;
+  justify-self: center;
+  width: 1440px;
+  height: 850px;
+  z-index: 0;
+}
+
+.background-image-top {
+  position:absolute;
+  top:0;
+  right: 0;
+}
+
+.background-image-bottom {
+  position:absolute;
+  left: 0;
+  bottom:0;
+}
+
+.pricing-component-header {
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--grayish-blue);
+  margin-bottom: 36px;
+}
+
+.switchButton {
+  background: var(--linear-gradient);
+}
+
+.pricing-component-body {
+  width: 1050px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.product-card{
+  width: 350px;
+  height: 455px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--grayish-blue);
+  background-color: white;
+  padding: 30px 36px;
+  border-radius: 12px;
+}
+
+.product-card h3 {
+  font-size: 18px;
+}
+
+#card0 {
+  border-radius: 12px 0px 0px 12px;
+}
+
+#card2 {
+  border-radius: 0px 12px 12px 0px;
+}
+
+
+.product-card h1 {
+  height: 114px;
+  font-size: 72px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap:8px;
+  filter: brightness(0.7);
+  margin-bottom: 6px;;
+}
+
+.product-card h1 span {
+  font-size: 44px;
+}
+
+.product-card p {
+  height: 38px;
+  display: grid;
+  place-content: center;
+}
+
+hr {
+  width: 100%;
+  border:none;
+  background-color: var(--light-grayish-blue);
+  height:1px;
+}
+
+.product-button{
+  background: var(--linear-gradient);
+  color: var(--very-light-grayish-blue);
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  height: 42px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-top:24px;
+}
+
+.product-button:hover {
+  cursor: pointer;
+}
+
+.active {
+  height: 500px;
+  background: rgb(163,168,240);
+  background: var(--linear-gradient);
+  color: var(--very-light-grayish-blue);
+  padding: 55px 36px;
+}
+
+.active .product-button{
+  background: var(--very-light-grayish-blue);
+  color: var(--medium-violet);
+  border: none;
+}
+
+.active h1 {
+  filter: brightness(1);
+}
