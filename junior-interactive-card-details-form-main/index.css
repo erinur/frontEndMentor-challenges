@@ -1,0 +1,369 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%)
+- Red (input errors): hsl(0, 100%, 66%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Light grayish violet: hsl(270, 3%, 87%)
+- Dark grayish violet: hsl(279, 6%, 55%)
+- Very dark violet: hsl(278, 68%, 11%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px
+
+### Font
+
+- Family: [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk)
+- Weights: 500
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+/*
+ <uniquifier>: Use a uniquifier for the class name
+<weight>: Use a value from 300 to 700
+*/
+
+:root {
+  /* Primary */
+
+  --linear-gradient /*Active input border*/: linear-gradient(180deg, hsl(249, 99%, 64%) 0%, hsl(278, 94%, 30%) 100%);
+  --red /*input errors*/: hsl(0, 100%, 66%);
+
+  /* Neutral */
+
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-violet: hsl(270, 3%, 87%);
+  --dark-grayish-violet: hsl(279, 6%, 55%);
+  --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+
+body {
+  display: grid;
+  place-content: center;
+  height: 100dvh;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--light-grayish-violet);
+  background-color: black;
+}
+
+.container {
+  width: 1440px;
+  height: 900px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: var(--white);
+}
+
+.containerLeft {
+  width: 720px;
+  height: 900px;
+  display: grid;
+  background: url("./images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+}
+
+.containerRight1 {
+  width: 720px;
+  height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 225px;
+  z-index: 0;
+}
+
+.cardFront {
+  grid-column: 1;
+  width: 447px;
+  height: 245px;
+  padding: 32px;
+  position: relative;
+  top: 187px;
+  left: 165px;
+  background: url("./images/bg-card-front.png");
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.cardLogo {
+  width: fit-content;
+  height: fit-content;
+}
+
+.cardData {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardNumber {
+  width: fit-content;
+  height: fit-content;
+  font-size:  34px;
+}
+
+.cardNameExpiry {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.cardCSV {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  top: 57px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.cardBack {
+  grid-column: 1;
+  width: 447px;
+  height: 245px;
+  padding: 44px;
+  position: relative;
+  top: 22px;
+  left: 260px;
+  background: url("./images/bg-card-back.png");
+  background-repeat: no-repeat;
+}
+
+.dataOnRight {
+  grid-column: 2;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 0;
+}
+
+input:focus{
+  outline: 2px solid purple;
+}
+
+.error{
+  display: flex;
+  color: red;
+  height: 14px;
+  font-size: 12px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: flex-start;
+  visibility: hidden;
+}
+
+.attribution {
+  width: 1440px;
+  height: 20px;
+  font-size: 12px;
+  text-align: center;
+  position: relative;
+  align-items: center;
+}
+
+.attribution a {
+  
+  color: var(--dark-grayish-violet);
+}
+
+.dataInput div {
+  width: 100%;
+}
+
+.title {
+  width: 100%;
+  text-transform: uppercase;
+  color: var(--very-dark-violet);
+  margin: 8px 0px;
+  font-size: 12px;
+  letter-spacing: 1.8px;
+}
+
+.dataInput input {
+  width: 100%;
+  height: 46px;
+  border-radius: 8px;
+  margin-bottom: 2px;
+  border: 1px solid var(--light-grayish-violet);
+  color: var(--dark-grayish-violet);
+  padding-left: 16px;
+  z-index: 0;
+}
+
+button {
+  width: 100%;
+  height: 54px;
+  background-color: var(--very-dark-violet);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  margin-top: 24px;
+  z-index: 2;
+}
+
+*::placeholder {
+  color: var(--light-grayish-violet)
+}
+
+@media only screen and (max-width: 1440px) {
+  .container {
+    width: 375px;
+    height: 704px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .containerLeft {
+    width: 100%;
+    height:240px;
+    display: block;
+    background: url("./images/bg-main-mobile.png");
+    background-repeat: no-repeat;
+  }
+  
+  .containerRight1 {
+    width: 100%;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 24px;
+    z-index: 0;
+  }
+
+  .cardFront {
+    width: 290px;
+    height: 160px;
+    padding: 24px;
+    top: 125px;
+    left: 18px;
+    z-index: 1;
+    background-size: contain;
+    font-size: 10px;
+  }
+
+  .cardLogo {
+    width: 25%;
+  }
+   
+  .cardNumber {
+    width: 100%;
+    font-size:  18px;
+    letter-spacing: 2px;
+  }
+  
+  .cardCSV {
+    width: 100%;
+    height: 40px;
+    top: 33px;
+    padding-right: 10px;
+    font-size: 10px;
+  }
+
+  .cardBack {
+    width: 290px;
+    height: 160px;
+    padding: 24px;
+    top: -130px;
+    left: 75px;
+    background-size: contain;
+  }
+
+  .dataOnRight {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px;
+    margin: 0px;
+    z-index: 0;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .attribution {
+    width: 375px;
+    height: 20px;
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+    align-items: center;
+    top: 24px;
+  }
+
+  .dataInput div {
+    width:86%;
+  }
+  
+  .title {
+    width: 86%;
+    margin: 4px 0px;
+    font-size: 12px;
+    letter-spacing: 1.8px;
+  }
+  
+  .dataInput input {
+    width: 100%;
+    height: 46px;
+    border-radius: 8px;
+    margin-bottom: 2px;
+    border: 1px solid var(--light-grayish-violet);
+    color: var(--dark-grayish-violet);
+    padding-left: 16px;
+    z-index: 0;
+  }
+  
+  button {
+    width: 86%;
+    height: 54px;
+    background-color: var(--very-dark-violet);
+    color: var(--white);
+    border: none;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-top: 12px;
+    z-index: 2;
+  }
+
+}
+
