@@ -164,6 +164,8 @@ $(document).ready(function() {
       })
     })
   }
+
+  continueButton()
   
   $('.nameInput').on('keyup', function(){
     changeCardName(this)
@@ -207,7 +209,5 @@ $(document).ready(function() {
   Coded by <a href="#">Your Name Here</a>.'
   `
   $('.attribution').html(attributionContent)
-
-  continueButton()
 
 })
