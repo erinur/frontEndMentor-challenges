@@ -22,9 +22,11 @@ $(document).ready(function() {
   <img src="./images/card-logo.svg" alt=""></img>
   `
   $('.cardLogo').append(cardLogoSVG)
+
   //Card data
 
   box('cardFront', 'cardData')
+
   //Card number
   
   box('cardData', 'cardNumber')
@@ -33,6 +35,7 @@ $(document).ready(function() {
   0000 0000 0000 0000
   `
   $('.cardNumber').append(cardNumber)
+
   //Card name and expipry
   
   box('cardData', 'cardNameExpiry')
@@ -42,11 +45,13 @@ $(document).ready(function() {
   <p class="cardExpiry"><span class="monthExpiry">00</span>/<span class="yearExpiry">00</span></p>
   `
   $('.cardNameExpiry').append(cardNameExpiry)
+
   //
   //card Back design
   //
   
   box('containerLeft', 'cardBack')
+
   //Card CSV
   
   box('cardBack', 'cardCSV')
@@ -55,6 +60,10 @@ $(document).ready(function() {
   000
   `
   $('.cardCSV').append(cardCSV)
+
+  //
+  //Alternative view on right side
+  //
 
   box('containerRight1', 'dataOnRight')
   const dataInput =
@@ -172,6 +181,7 @@ $(document).ready(function() {
   })
 
   $('.numberInput').on('keyup', function(){
+    console.log('ok')
     changeCardNumber(this)
     changeInputNumber(this)
   })
@@ -209,5 +219,6 @@ $(document).ready(function() {
   Coded by <a href="#">Your Name Here</a>.'
   `
   $('.attribution').html(attributionContent)
+
 
 })

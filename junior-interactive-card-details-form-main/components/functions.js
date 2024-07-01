@@ -82,6 +82,7 @@ export function checkInputs(){
   checkExpiryMonth(checkStatus)
   checkExpiryYear(checkStatus)
   checkCSV(checkStatus)
+  console.log(checkStatus)
  return (checkStatus)
 }
 
