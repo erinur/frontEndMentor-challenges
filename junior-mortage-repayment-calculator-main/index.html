@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./index.css">
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+</head>
+<body>
+  <div class="container">
+    <div class="data-entry">
+      <div class="data-entry-top">
+        <h2 class="data-entry-title">Mortage Calculator</h2>
+        <a class="data-entry-clear" href="#">Clear All<a/>
+      </div>
+      <form action="#" class="data-entry-input">
+        <div class="mortage-amount input">
+          <legend>Mortgage Amount</legend>
+          <div class="input-box"><span class = "pound">&pound</span><input type="text"></div>
+        </div>
+        <div class="mortage-and-interest">
+          <div class="mortage-term input">
+            <legend>Mortgage Term</legend>
+            <div class="input-box"><input type="text"><span class = "years">years</span></div>
+          </div>
+          <div class="interest-rate input">
+            <legend>Interest Rate</legend>
+            <div class="input-box"><input type="text"><span class = "interest">%</span></div>
+          </div>
+        </div>
+        <div class="mortage-type">
+          <legend>Mortage Type</legend>
+          <div class="mortage-type-repayment radio">
+            <input type="radio" id="mortage-type-repayment" name="mortage-type">
+            <label for="mortage-type-repayment">Repaiment</label>
+          </div>
+          <div class="mortage-type-interest radio">
+            <input type="radio" id="mortage-type-interest" name="mortage-type">
+            <label for="mortage-type-interest" >Interest Only</label>
+          </div>
+        </div>
+        <button class="button"><img src="./assets/images/icon-calculator.svg" alt="">Calculate Repayments</button>
+      </form>
+    </div>
+    <div id="data-result">
+      
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script type="module" src="./index.js"></script>
+</body>
+</html>

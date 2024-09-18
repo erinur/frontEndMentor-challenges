@@ -1,0 +1,454 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+> 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
+
+## Colors
+
+### Primary
+
+- Lime: hsl(61, 70%, 52%)
+- Red: hsl(4, 69%, 50%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Slate 100: hsl(202, 86%, 94%)
+- Slate 300: hsl(203, 41%, 72%)
+- Slate 500: hsl(200, 26%, 54%)
+- Slate 700: hsl(200, 24%, 40%)
+- Slate 900: hsl(202, 55%, 16%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 16px 
+
+### Font
+
+- Family: [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans)
+- Weights: 500, 700
+
+> 💎 [Upgrade to Pro](https://www.frontendmentor.io/pro?ref=style-guide) for design file access to see all design details and get hands-on experience using a professional workflow with tools like Figma. The design file for this challenge also includes a design system and tablet layout to help you build a more accurate solution faster.
+*/
+
+:root {
+
+  /*### Primary*/
+
+  --lime: hsl(61, 70%, 52%);
+  --lime-light: hsl(61, 70%, 52%, 0.1);
+  --red:hsl(4,69%,50%);
+
+  /* ### Neutral */
+  --white: hsl(0, 0%, 100%);
+  --slate-100: hsl(202, 86%, 94%);
+  --slate-300: hsl(203, 41%, 72%);
+  --slate-500: hsl(200, 26%, 54%);
+  --slate-700: hsl(200, 24%, 40%);
+  --slate-900: hsl(202, 51%, 16%);
+  --slate-1000: hsl(200, 66%, 12%);
+}
+
+@font-face {
+  font-family: "Jakarta";
+  src: url("./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf");
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: 'Jakarta', sans-serif;
+  font-weight: 500;
+  background-color: var(--slate-100);
+  color: var(--slate-900);
+}
+
+.container {
+  width: 1010px;
+  height: 606px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  background-color: var(--white);
+  font-size: 16px;
+}
+
+.data-entry {
+  width: 510px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 24px;
+}
+
+.data-entry-top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.data-entry-top a {
+  color: var(--slate-500);
+}
+
+.data-entry-input {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.mortage-and-interest {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.input {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+legend {
+  color: var(--slate-700);
+  margin-bottom: 12px;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid var(--slate-700);
+  overflow: hidden;
+}
+
+.input-box span {
+  height: 100%;
+  color:var(--slate-700);
+  background-color: var(--slate-100);
+  border: none;
+  display: grid;
+  place-content: center;
+  font-weight: 700;
+}
+
+.pound {
+  width: 72px;
+}
+
+.years {
+  width: 144px;
+}
+
+.interest {
+  width: 72px;
+}
+
+.input input {
+  width: 100%;
+  height: 100%;
+  border:none;
+  padding: 12px;
+  font-family: inherit;
+  font-size:inherit;
+  font-weight: 700;
+  outline: none;
+}
+
+.mortage-type {
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  color: var(--slate-900);
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid var(--slate-700);
+  margin: 6px 0px;
+  padding-left: 12px;
+  overflow: hidden;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--white);
+  margin: 0;
+  font: inherit;
+  height: 14px;
+  width: 14px;
+  outline: 2px solid var(--slate-700);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  transform: scale(0);
+  box-shadow: inset 1em 1em var(--lime);
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+  outline: 1px solid var(--lime);
+}
+
+input[type="radio"]:checked {
+  outline: 1px solid var(--lime);
+}
+
+label {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 56px;
+  border: none;
+  border-radius: 48px;
+  color:var(--slate-900);
+  background-color: var(--lime);
+  width: 75%;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+input:hover, button:hover, label:hover {
+  cursor: pointer;
+}
+
+#data-result {
+  width: 500px;
+  height: 606px;
+  background-color: var(--slate-900);
+  border-radius: 0px 0px 0px 72px;
+}
+
+.empty-result {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  padding: 36px;
+  text-align: center;
+}
+
+.empty-result h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.empty-result p {
+  color: var(--slate-300);
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.complete-result {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: var(--white);
+  padding: 18px 36px;
+  text-align: left;
+}
+
+.complete-result h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.complete-result p {
+  color: var(--slate-300);
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 18px;
+}
+
+.monthly-repayments{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  border-radius: 8px;
+  border-top: 4px solid var(--lime);
+  background-color: var(--slate-1000);
+  padding: 8px 24px 24px;
+  margin-top: 18px;
+}
+
+monthlyPayment{
+  width: 100%;
+  color: var(--lime);
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px solid var(--slate-700);
+}
+
+totalPayment{
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: relative;
+  align-self: end;
+  justify-self: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 1080px) {
+
+body{
+  height: auto;
+}
+
+.container {
+  width: 375px;
+  height: auto;
+  border-radius: 0px;
+  flex-direction: column;
+}
+
+.data-entry {
+  width: 100%;
+  padding: 12px 24px;
+}
+  
+.data-entry-top {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 28px;
+}
+
+.data-entry-top h2 {
+  margin-bottom: 12px;
+}
+  
+.mortage-and-interest {
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mortage-type {
+  margin-bottom: 16px;
+}
+  
+.button {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+#data-result {
+  width: 100%;
+  height: auto;
+  border-radius: 0px;
+}
+  
+.complete-result {
+  padding: 24px;
+  padding-top: 12px;
+}
+
+.complete-result h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.complete-result p {
+  margin-bottom: 0px;
+}
+
+monthlyPayment{
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+hr {
+  margin-bottom: 0px;
+}
+
+totalPayment{
+  font-size: 24px;
+  margin-top: 14px;
+}
+}
