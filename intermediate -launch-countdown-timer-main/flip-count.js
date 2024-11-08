@@ -54,7 +54,7 @@ export function flipCount(DOMubication, time) {
     const presentTime = new Date(totalSeconds)
     const nextTime = new Date(totalSeconds - 1000)
 
-    totalSeconds = totalSeconds - 1
+    totalSeconds = totalSeconds - 3.9
 
     const selectedTime = {
       days: [presentTime.getUTCDate().toString().padStart(2, '0'), nextTime.getUTCDate().toString().padStart(2, '0')],
