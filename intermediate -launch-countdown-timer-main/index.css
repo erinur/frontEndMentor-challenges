@@ -1,0 +1,229 @@
+:root {
+/* Primary Colors */
+  
+  ---grayish-blue: hsl(237, 18%, 59%);
+  ---soft-red: hsl(345, 95%, 68%);
+  
+/* Neutral Colors */
+  
+  ---white: hsl(0, 0%, 100%);
+  ---dark-desaturated-blue: hsl(236, 21%, 26%);
+  ---dark-desaturated-blue-line: hsl(236, 21%, 48%);
+  ---very-dark-blue: hsl(235, 16%, 14%);
+  ---very-dark-mostly-black-blue: hsl(234, 17%, 12%);
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+}
+
+.container {
+  width: 1440px;
+  height: 800px;
+  background-image: url('./images/pattern-hills.svg'), url('./images/bg-stars.svg');
+  background-repeat: no-repeat;
+  background-position: bottom, top;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 32px;
+  font-family: "Red Hat Text", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 14px;
+  font-style:normal;
+  text-transform: uppercase;
+  color: var(---white);
+  background-color: var(---very-dark-blue);
+}
+
+.header {
+  font-size: 24px;
+  letter-spacing: 12px;
+  margin: 100px;
+  font-weight: 700;
+}
+
+.countdown {
+  margin-top: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.countdown div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.count-box {
+  width: 150px;
+  height: 140px;
+  font-size: 48px;
+  border-radius: 8px;
+  font-weight: 700;
+  background-color: var(---dark-desaturated-blue);
+  color: var(---soft-red);
+  position: relative;
+  box-shadow: 0px 10px 0px var(---very-dark-mostly-black-blue);
+}
+
+.flip-container {
+  width: 150px;
+  height: 140px;
+}
+
+span {
+  font-size: 76px;
+}
+
+.left-dot {
+  background-color: var(---very-dark-blue);
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  position: absolute;
+  top: calc(50% - 1px);
+  left: -4px;
+  z-index: 2;
+}
+
+.right-dot {
+  background-color: var(---very-dark-blue);
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  position: absolute;
+  top: calc(50% - 1px);
+  right: -4px;
+  z-index: 2;
+}
+
+.flip-part-CSS {
+  background-color: var(---dark-desaturated-blue);
+  color: var(---soft-red);
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.count-title {
+  color: var(---grayish-blue);
+  margin: 24px;
+  font-weight: 700;
+  letter-spacing: 6px;
+}
+
+.footer {
+  display: flex;
+  align-items:center;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin-top: 205px;
+}
+
+.rrss-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 32px;
+  width: 120px;
+  margin: 24px;
+}
+
+.rrss-icons:hover {
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+
+.attribution a {
+  color:aqua
+}
+
+@media only screen and (max-width: 960px) {
+  .container {
+    width: 375px;
+    height: auto;
+    padding: 25px;
+    background-position: left bottom, center top;
+    background-size: 1100px, 1500px;
+    justify-content: flex-start;
+  }
+
+  .header {
+    width: 100%;
+    font-size: 18px;
+    letter-spacing: 6px;
+    margin-top: 120px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .countdown {
+    width: 100%;
+    height: auto;
+    gap: 12px;
+  }
+
+  .countdown div {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .count-box {
+    width: 75px;
+    height: 70px;
+    box-shadow: 0px 5px 0px var(---very-dark-mostly-black-blue);
+    font-size: 12px;
+  }
+
+  .flip-container {
+    width: 75px;
+    height: 70px;
+  }
+  
+  .count-title {
+    height: 24px;
+    letter-spacing: 3px;
+    font-size: 7px;
+  }
+
+  span {
+    font-size: 38px;
+  }
+
+  .footer {
+    display: flex;
+    align-items:center;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-top: 215px;
+  }
+
+  .attribution {
+    font-size: 8px;
+  }
+
+}
