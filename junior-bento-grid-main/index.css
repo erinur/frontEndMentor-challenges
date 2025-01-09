@@ -26,7 +26,7 @@ body {
   justify-content: center;
   flex-direction: column;
   background-color: var(--black);
-  height: 99dvh;
+  height: 100dvh;
 }
 
 .container {
@@ -51,7 +51,6 @@ body {
   grid-auto-flow: column;
   gap: 32px;
 }
-
 
 .box {
   border-radius: 12px;
